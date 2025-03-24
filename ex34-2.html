@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: #f4f4f4;
+      }
+      h1 {
+        text-align: center;
+        background-color: #ffffff;
+      }
+
+      table {
+        width: 100%;
+      }
+      th,
+      td {
+        text-align: left;
+        padding: 10px;
+      }
+      td {
+        background-color: #ffffff;
+      }
+      .number {
+        width: 20px;
+        text-align: center;
+      }
+      .container {
+        border-radius: 5px;
+        padding: 20px;
+        margin: 5% auto;
+        width: 60%;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #ffffff;
+        margin: 20px 0;
+      }
+
+      .item-form {
+        height: 40px;
+        border-radius: 5px;
+        border: 2px solid lightgray;
+        padding: 10px;
+        background-color: #ffffff;
+      }
+
+      #submit {
+        color: #ffffff;
+        border: 1px solid #6ba7ff;
+        background-color: #007bff;
+        cursor: pointer;
+      }
+      .btn-action {
+        background-color: #f4f4f4;
+        border-radius: 5px;
+        border: 2px solid lightgray;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Task Mangement</h1>
+      <form>
+        <input
+          class="item-form"
+          type="text"
+          id="content"
+          placeholder="Content"
+        />
+        <input class="item-form" type="date" id="due-date" />
+        <select class="item-form" id="chosse-status">
+          <option value="">Chosse status</option>
+          <option value="pending">Pending</option>
+          <option value="resolved">Resolved</option>
+          <option value="out">Out</option>
+        </select>
+        <input class="item-form" type="text" id="name" placeholder="Username" />
+        <button class="item-form" type="submit" id="submit">Submit</button>
+      </form>
+
+      <table>
+        <thead>
+          <tr>
+            <th class="number">#</th>
+            <th>Content</th>
+            <th>Due date</th>
+            <th>Status</th>
+            <th>Assigned to</th>
+            <th colspan="2">Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="./ex34-2.js"></script>
+  </body>
+</html>
